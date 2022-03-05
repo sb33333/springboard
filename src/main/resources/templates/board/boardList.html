@@ -28,14 +28,14 @@
 	        		<td th:text="${list.boardIdx}"></td>
 	        		<td class="title"><a href="/board/openBoardDetail.do?boardIdx=" th:attrappend="href=${list.boardIdx}" th:text="${list.title}"></a></td>
 	        		<td th:text="${list.hitCnt}"></td>
-	        		<td th:text="${list.createdDatetime}"></td>
+	        		<td th:text="${#temporals.format(list.createdDateTime, 'yyyy-mm-dd hh:mm:ss')}"></td>
 	        	</tr> 
 	        	<tr th:unless="${#lists.size(list)} > 0">
 	        		<td colspan="4">조회된 결과가 없습니다.</td>
 	        	</tr>
 	        </tbody>
 	    </table>
-	    <a href="/board/openBoardWrite.do" class="btn">글 쓰기</a>
+	    <a href="/boardWrite" class="btn">글 쓰기</a>
     </div>
 </body>
 </html>

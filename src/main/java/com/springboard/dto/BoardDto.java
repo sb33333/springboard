@@ -6,8 +6,10 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
+@Getter @Setter
 @Table(schema = "springboot", name = "t_board")
+@ToString
+@NoArgsConstructor
 public class BoardDto {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "board_idx")
@@ -24,5 +26,12 @@ public class BoardDto {
     private String updatorId;
     @Column(name = "updated_datetime")
     private LocalDateTime updatedDateTime;
+
+    @Builder
+    public BoardDto (String creatorId, LocalDateTime createdDateTime) {
+        this.creatorId = creatorId;
+        this.createdDateTime = createdDateTime;
+    }
+
 
 }
