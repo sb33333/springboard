@@ -3,4 +3,4 @@
 
 
 ### 참고자료
-thymeleaf - temporals 사용법 : https://gigas-blog.tistory.com/126
+thymeleaf에서 LocalDateTime 클래스 처리하기 - temporals 사용법 : https://gigas-blog.tistory.com/126
