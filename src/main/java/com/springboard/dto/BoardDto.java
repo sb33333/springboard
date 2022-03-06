@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 @Table(schema = "springboot", name = "t_board")
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class BoardDto {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "board_idx")
@@ -26,12 +28,7 @@ public class BoardDto {
     private String updatorId;
     @Column(name = "updated_datetime")
     private LocalDateTime updatedDateTime;
-
-    @Builder
-    public BoardDto (String creatorId, LocalDateTime createdDateTime) {
-        this.creatorId = creatorId;
-        this.createdDateTime = createdDateTime;
-    }
-
+    @Column(name = "deleted_yn")
+    private boolean deletedYn;
 
 }

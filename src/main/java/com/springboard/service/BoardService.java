@@ -4,6 +4,7 @@ import com.springboard.dto.BoardDto;
 import com.springboard.repository.BoardRepository;
 
 import javax.transaction.Transactional;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Transactional
@@ -25,5 +26,20 @@ public class BoardService {
 
     public BoardDto selectBoardByIdx(int idx) {
         return repository.findByIdx(idx);
+    }
+
+    public BoardDto updateCount(BoardDto boardDto) {
+        BoardDto savedDto = repository.findByIdx(boardDto.getBoardIdx());
+        savedDto.setHitCnt(savedDto.getHitCnt() + 1);
+        return savedDto;
+    }
+
+    public BoardDto amendBoard(BoardDto boardDto) {
+        BoardDto savedDto = repository.findByIdx(boardDto.getBoardIdx());
+        savedDto.setUpdatorId("admin");
+        savedDto.setUpdatedDateTime(LocalDateTime.now());
+        savedDto.setTitle(boardDto.getTitle());
+        savedDto.setContents(boardDto.getContents());
+        return savedDto;
     }
 }

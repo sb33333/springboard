@@ -53,12 +53,12 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#list").on("click", function(){
-				location.href = "/board/openBoardList.do";
+				location.href = "/board";
 			});
 			
 			$("#edit").on("click", function(){
 				var frm = $("#frm")[0];
-				frm.action = "/board/updateBoard.do";
+				frm.action = "/board/update";
 				frm.submit();
 			});
 			

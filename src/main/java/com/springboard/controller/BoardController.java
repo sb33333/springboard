@@ -59,7 +59,14 @@ public class BoardController {
     public String readArticle(@PathVariable int idx, Model model) {
         BoardDto result = service.selectBoardByIdx(idx);
         model.addAttribute("board", result);
+        service.updateCount(result);
         return "/board/boardContent";
     }
 
+//    게시글 수정하기
+    @RequestMapping(value = "/board/update", method = RequestMethod.POST)
+    public String updateArticle(@ModelAttribute("frm") BoardDto boardDto) {
+        service.amendBoard(boardDto);
+        return "redirect:/";
+    }
 }
