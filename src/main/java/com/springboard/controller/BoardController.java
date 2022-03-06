@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -53,5 +54,12 @@ public class BoardController {
         return "redirect:/";
     }
 
+//    게시글 내용 열기
+    @RequestMapping(value = "/board/{idx}", method = RequestMethod.GET)
+    public String readArticle(@PathVariable int idx, Model model) {
+        BoardDto result = service.selectBoardByIdx(idx);
+        model.addAttribute("board", result);
+        return "/board/boardContent";
+    }
 
 }

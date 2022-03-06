@@ -22,4 +22,8 @@ public class BoardService {
         repository.save(boardDto);
         return boardDto;
     }
+
+    public BoardDto selectBoardByIdx(int idx) {
+        return repository.findByIdx(idx);
+    }
 }

@@ -21,5 +21,9 @@ public class BoardRepository {
         return em.createQuery("select board from BoardDto as board", BoardDto.class).getResultList();
     }
 
+    public BoardDto findByIdx(int idx) {
+        return em.find(BoardDto.class, idx);
+    }
+
 
 }
