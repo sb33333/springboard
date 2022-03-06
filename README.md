@@ -1,6 +1,9 @@
 # springboard
 <a href="http://aladin.kr/p/TedbB">김인우, 『스프링 부트 시작하기』, 프로그래밍 인사이트</a> - 실습
 
+교재에서는 MyBatis를 사용했으나 Spring Jpa로 변경했습니다.
+HTML페이지와 CSS는 교재 자료를 사용했습니다.
+
 
 ### 참고자료
 thymeleaf에서 LocalDateTime 클래스 처리하기 - temporals 사용법 : https://gigas-blog.tistory.com/126 </br>
