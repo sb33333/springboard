@@ -6,7 +6,6 @@ import com.springboard.service.BoardService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 
@@ -29,5 +28,7 @@ public class SpringConfig {
     public BoardRepository boardRepository() {
         return new BoardRepository(em);
     }
+
+
 
 }
