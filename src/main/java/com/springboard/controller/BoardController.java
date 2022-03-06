@@ -69,4 +69,11 @@ public class BoardController {
         service.amendBoard(boardDto);
         return "redirect:/";
     }
+
+//    게시글 삭제하기
+    @RequestMapping(value = "/board/delete", method = RequestMethod.POST)
+    public String deleteArticle (@ModelAttribute("frm") BoardDto boardDto) {
+        service.deleteBoard(boardDto);
+        return "redirect:/";
+    }
 }

@@ -16,7 +16,7 @@ public class BoardService {
     }
 
     public List<BoardDto> selectBoardList() {
-        return repository.findAll();
+        return repository.findValidBoard();
     }
 
     public BoardDto writeBoard(BoardDto boardDto) {
@@ -41,5 +41,12 @@ public class BoardService {
         savedDto.setTitle(boardDto.getTitle());
         savedDto.setContents(boardDto.getContents());
         return savedDto;
+    }
+
+    public void deleteBoard(BoardDto boardDto) {
+        BoardDto savedDto = repository.findByIdx(boardDto.getBoardIdx());
+        savedDto.setUpdatorId("admin");
+        savedDto.setUpdatedDateTime(LocalDateTime.now());
+        savedDto.setDeletedYn(true);
     }
 }
