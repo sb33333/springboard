@@ -1,7 +1,10 @@
 # springboard
 <a href="http://aladin.kr/p/TedbB">김인우, 『스프링 부트 시작하기』, 프로그래밍 인사이트</a> - 실습
 
-교재에서는 MyBatis를 사용했으나 Spring Jpa로 변경했습니다.
+Spring Boot
+Spring Jpa
+MySql
+
 HTML페이지와 CSS는 교재 자료를 사용했습니다.
 
 
