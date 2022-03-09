@@ -9,6 +9,9 @@ Logback 관련
 configuration 파일을 작성할 때 property와 include의 순서를 잘 조절하자.
 예) include 된 xml에서 필요한 property를 내가 지정하고 싶으면 property가 먼저 작성되어야 한다.
 
+log4jdbc 관련
+의존성 추가 시 버전까지 넣자. (버전 넣지 않으니 에러 발생함 → https://blog.naver.com/allkanet72/220926784590)
+
 https://wbluke.tistory.com/51
 https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/
 log4jdbc 관련 → https://dev-overload.tistory.com/28
