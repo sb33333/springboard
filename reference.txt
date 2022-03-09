@@ -1,1 +1,3 @@
-sd
+Logback 관련
+configuration 파일을 작성할 때 property와 include의 순서를 잘 조절하자.
+예) include 된 xml에서 필요한 property를 내가 지정하고 싶으면 property가 먼저 작성되어야 한다.
