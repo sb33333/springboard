@@ -2,6 +2,8 @@ package com.springboard.controller;
 
 import com.springboard.dto.BoardDto;
 import com.springboard.service.BoardService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,7 @@ import java.util.List;
 public class BoardController {
 
     private final BoardService service;
+    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     public BoardController(BoardService service) {
         this.service = service;
@@ -32,6 +35,7 @@ public class BoardController {
     @RequestMapping(value = "/board", method = RequestMethod.GET)
     public ModelAndView boardList() {
         ModelAndView mv = new ModelAndView("/board/boardList");
+        log.warn("boardList");
         List<BoardDto> result = service.selectBoardList();
         mv.addObject("list",result);
         return mv;
