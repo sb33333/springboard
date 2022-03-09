@@ -11,3 +11,4 @@ configuration 파일을 작성할 때 property와 include의 순서를 잘 조�
 
 https://wbluke.tistory.com/51
 https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/
+log4jdbc 관련 → https://dev-overload.tistory.com/28
