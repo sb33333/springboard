@@ -14,4 +14,6 @@ AOP 사용</br>
 RESTful</br>
 Spring Data Jpa</br>
 
+스프링 프로파일</br>
+
 ### <a href="https://github.com/sb33333/springboard/blob/master/reference.txt">참고자료</a>
