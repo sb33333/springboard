@@ -39,4 +39,6 @@ out/
 ### DB properties ###
 database.properties
 
+### logging ###
+.logs
 
