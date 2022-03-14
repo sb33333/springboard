@@ -25,6 +25,7 @@ public class SpringConfig {
         return new BoardService(boardRepository());
     }
 
+    @Bean
     public BoardRepository boardRepository() {
         return new BoardRepository(em);
     }

@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter @Setter
-@Table(schema = "springboot", name = "t_board")
+@Table(name = "t_board")
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor

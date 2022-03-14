@@ -34,7 +34,7 @@ public class BoardController {
     //  게시글 목록 창 불러오기
     @RequestMapping(value = "/board", method = RequestMethod.GET)
     public ModelAndView boardList() {
-        ModelAndView mv = new ModelAndView("/board/boardList");
+        ModelAndView mv = new ModelAndView("board/boardList");
         log.warn("boardList");
         List<BoardDto> result = service.selectBoardList();
         mv.addObject("list",result);
@@ -45,7 +45,7 @@ public class BoardController {
     @RequestMapping(value = "/boardWrite", method = RequestMethod.GET)
     public String openBoardWrite(Model model) {
         model.addAttribute("dto", new BoardDto());
-        return "/board/boardWrite";
+        return "board/boardWrite";
     }
 
     //    새 게시글 저장하기
@@ -64,7 +64,7 @@ public class BoardController {
         BoardDto result = service.selectBoardByIdx(idx);
         model.addAttribute("board", result);
         service.updateCount(result);
-        return "/board/boardContent";
+        return "board/boardContent";
     }
 
 //    게시글 수정하기
