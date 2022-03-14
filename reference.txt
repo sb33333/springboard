@@ -15,3 +15,33 @@ log4jdbc 관련
 https://wbluke.tistory.com/51
 https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/
 log4jdbc 관련 → https://dev-overload.tistory.com/28
+
+
+ Spring Bean 이란?
+https://atoz-develop.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B9%88Bean%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%83%9D%EC%84%B1-%EC%9B%90%EB%A6%AC
+
+Spring Bean을 이용한 의존성 주입
+https://atoz-develop.tistory.com/entry/Spring-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85DI-Dependency-Injection%EC%9D%98-%EC%84%B8%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95
+
+Spring boot 자동설정
+https://wiper2019.tistory.com/207
+
+spring boot에서 h2db 를 메모리 방식으로 사용
+https://blog.naver.com/enjoy_complexity/222074662833
+
+h2데이터베이스
+https://pamyferret.tistory.com/17
+
+
+properties 관리
+https://hubring.tistory.com/41
+https://linked2ev.github.io/gitlog/2020/01/05/springboot-7-%EC%8A%A4%ED%94%84%EB%A7%81%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC/
+https://royleej9.tistory.com/entry/Spring-properties-%EC%84%A4%EC%A0%95-%EB%B6%84%EB%A6%AC
+https://wildeveloperetrain.tistory.com/8
+
+JAR 파일 실행 시 viewResolver error : https://dev-jwblog.tistory.com/40
+
+properties 적용하여 실행하기
+JAR 파일로 실행하기 : https://shirohoo.github.io/debugging/2021-05-02-debugging-9/
+build.gradle 에서 적용 (잘 안됨) : https://lejewk.github.io/springboot-gradle-spring-profiles-active/
+
